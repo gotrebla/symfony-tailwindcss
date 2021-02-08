@@ -1,9 +1,19 @@
-/*
- * Welcome to your app's main JavaScript file!
- *
- * We recommend including the built version of this JavaScript file
- * (and its CSS file) in your base layout (base.html.twig).
- */
-
-// any CSS you import will output into a single scss file (app.scss in this case)
+import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import '../scss/app.scss';
+import Time from "./components/Time";
+
+class App extends Component{
+    render(){
+        return(
+            <div className="App">
+                <Time/>
+            </div>
+        )
+    }
+
+}
+
+export default App;
+
+ReactDOM.render(<Time/>, document.getElementById('root'))
